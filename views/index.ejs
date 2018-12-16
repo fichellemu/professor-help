@@ -1,19 +1,35 @@
 <html>
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+        }
+        .tdnum {
+            text-align: center;
+        }
+    </style>
     <body>
         <table id="table" >  
             <thead>  
                 <tr>  
-                    <th>Username</th>  
-                    <th>Password</th>  
+                    <th>ClassID</th>  
+                    <th>ClassName</th>  
+                    <th>Major</th>  
+                    <th>Core/Elect</th>  
+                    <th>PreReq1</th>  
+                    <th>PreReq2</th>  
                 </tr>  
             </thead>  
              <tbody>  
-             
+                <% items.forEach(function (item) { %>
                 <tr>  
-                    <td><%= items %></td>  
-                    <td>Major</td>
+                    <td class="tdnum"><%= item.ClassID %></td>  
+                    <td><%= item.ClassSelectName %></td>
+                    <td><%= item.Major %>   </td>
+                    <td class="tdnum"><%= item.CoreOrElect %> </td>
+                    <td class="tdnum"><%= item.PreReqID %>    </td>
+                    <td class="tdnum"><%= item.PreReqID_2 %>  </td>
                 </tr>                                   
-             
+                <% }) %>
              </tbody>
         </table>   
     </body>
