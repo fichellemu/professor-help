@@ -21,6 +21,9 @@ const con = mysql.createConnection({
 
 
 app.get('/',function(req,res){
-    res.send("hello this is the final project")
+    res.send("hello this is the final project");
+    con.query("SELECT * FROM classes WHERE ClassSelectName=1", function(err,result){
+        res.send(result);
+    });
 });
 
