@@ -6,7 +6,7 @@ var http=require('http');
 var mysql=require('mysql');
 
 //process.env.PORT || 5000
-var server= app.listen(5000,function(){
+var server= app.listen(process.env.PORT || 5000,function(){
     console.log("Server started on heuroku")
 });
 
