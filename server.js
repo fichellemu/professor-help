@@ -22,6 +22,7 @@ const con = mysql.createConnection({
 
 //run our engine{items:result}
 app.set('view engine','ejs');
+app.use(express.static(__dirname + '/views'));
 var obj = {};
 app.get('/',function(req,res){   
     con.query("SELECT * FROM classes WHERE ClassID !=''", function(err,result){
@@ -32,8 +33,8 @@ app.get('/',function(req,res){
         console.log("hello this is the final project");
         console.log(result);
         obj={items: result};
-        res.render("index",{items:result});
-        console.log(result[0].ClassID);
+        res.render("final",{items:result});
+        //console.log(result[0].ClassID);
     });
 });
 app.get('/final2.html',function(req,res){   
