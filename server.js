@@ -38,14 +38,13 @@ app.get('/',function(req,res){
     });
 });
 app.get('/final2.html',function(req,res){   
-    con.query("SELECT * FROM classes WHERE ClassID !=''", function(err,result){
+    con.query("SELECT * FROM classes", function(err,result){
         if (err){
             console.log("ERROR");
             return;
         }
-        
-        obj={items: result};
         res.render("final2",{items:result});
-        //console.log(result[0].ClassID);
     });
+
+    
 });
