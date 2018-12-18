@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="final.css" rel="stylesheet" />
+        <link href="/final.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <title>ProfessorHelp</title>
@@ -18,33 +18,14 @@
                 4.5 Good!
             </div>
         <h3 class="box1"> Reviews </h3>   
+        <% items.forEach(function (item) { %>
             <div class="reviewWrite">
                 <div class="reviewHeader">
-                    <div class="reviewerName">Bob Smith</div>
-                    <div class="date">11/11/2019</div>
-                    <div class="score">3.0</div>
+                    <div class="reviewerName"> <%= item.FirstName %> <%= item.LastName %> </div>
                 </div>
-                <div class="review">"Whatever I dont care this class sucks dick anyways."</div>
+                <div class="review"><%= item.Comment %> </div>
             </div> 
-            <div class="reviewWrite">
-                    <div class="reviewHeader">
-                        <div class="reviewerName">Bob Smith</div>
-                        <div class="date">11/11/2019</div>
-                        <div class="score">3.0</div>
-                    </div>
-                    <div class="review">"Whatever I dont care this class sucks dick anyways."</div>
-                </div> 
-                <div class="reviewWrite">
-                        <div class="reviewHeader">
-                            <div class="reviewerName">Bob Smith</div>
-                            <div class="date">11/11/2019</div>
-                            <div class="score">3.0</div>
-                        </div>
-                        <div class="review">"Whatever I dont care this class sucks dick anyways."</div>
-                    </div> 
-            <div class="reviewWrite">
-            <button class="seebtn">See More</button>
-            </div>
+        <% }) %> 
     </body>
 </html>
 
