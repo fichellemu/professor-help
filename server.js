@@ -48,10 +48,28 @@ app.get('/final2.html',function(req,res){
     
 });
 
+//comments page
+app.get('/final4/:ligma',function(req,res){  
+    var urlarr= req.params.ligma;
+    //console.log(urlarr); 
+
+    var sql = "SELECT * FROM comments WHERE ProfessorID=?";
+    con.query(sql,urlarr, function(err,result){
+        if (err){
+            console.log("ERROR");
+            return;
+        }
+        console.log(result[0].FirstName);
+        console.log(result[0].Comment);
+        res.render("final4",{items:result});
+    });
+    
+});
+
 ///<%= item.ClassID %>
 app.get('/:ligma',function(req,res){  
     var urlarr= req.params.ligma;
-    console.log(urlarr); 
+    //console.log(urlarr); 
     
     //var sql = "SELECT * FROM prof WHERE ClassID = '" + urlarr + "'";
     var sql = "SELECT * FROM prof WHERE ClassID =?";
