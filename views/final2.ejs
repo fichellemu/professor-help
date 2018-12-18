@@ -13,7 +13,7 @@
         <% items.forEach(function (item) { %>
             <%if (item.CoreOrElect == 2) { %>
             <div class="scale">
-                    <a href=final3.html><button class="classbt"><%= item.ClassSelectName %></button></a>
+                    <a href= <%= item.ClassID %> ><button class="classbt"><%= item.ClassSelectName %></button></a>
             </div> 
             <% } %>
         <% }) %>  
@@ -21,7 +21,7 @@
         <% items.forEach(function (item) { %>
             <%if (item.CoreOrElect == 0) { %>
             <div class="scale">
-                    <a href=final3.html><button class="classbt"><%= item.ClassSelectName %></button></a>
+                <a href= <%= item.ClassID %> ><button class="classbt"><%= item.ClassSelectName %></button></a>
             </div> 
             <% } %>
         <% }) %> 
@@ -29,7 +29,7 @@
         <% items.forEach(function (item) { %>
             <%if (item.CoreOrElect == 1) { %>
             <div class="scale">
-                    <a href=final3.html><button class="classbt"><%= item.ClassSelectName %></button></a>
+                <a href= <%= item.ClassID %> ><button class="classbt"><%= item.ClassSelectName %></button></a>
             </div> 
             <% } %>
         <% }) %> 
