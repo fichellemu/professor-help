@@ -10,20 +10,16 @@
         <a href="https://sims.rutgers.edu/webreg/"><i class="fa fa-graduation-cap" style="font-size:75px;color:white;" > </i></a>
         <h1 class="major1">Foundations of Business Programming</h1>
         <h2 class="cORe">Professors</h2>
+        <% items.forEach(function (item) { %>
             <div class="scalep">
                     <div class="profrate">
-                    <a href=final4.html><button class="profbt">Someone</button></a> 
+                    <a href=final4.html><button class="profbt"><%= item.FullName %></button></a> 
                         <div class="num"> 
                         4.5 <i class="fa fa-star" style="font-size:30px;color:#FFC300;" > </i>
                         </div>
                     </div>
-                    <div class="profrate">
-                    <a href=""><button class="profbt">Someone1</button></a> 
-                        <div class="num"> 
-                        3.5 <i class="fa fa-star" style="font-size:30px;color:#FFC300;" > </i>
-                        </div>
-                    </div>
-            </div>   
+            </div>
+        <% }) %>    
     </body>
 </html>
 
