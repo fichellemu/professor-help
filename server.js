@@ -59,8 +59,9 @@ app.get('/final4/:ligma',function(req,res){
             console.log("ERROR");
             return;
         }
-        console.log(result[0].FirstName);
-        console.log(result[0].Comment);
+        //console.log(result);
+        //console.log(result[1].FirstName);
+        //console.log(result[1].Comment);
         res.render("final4",{items:result});
     });
     
