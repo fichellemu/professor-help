@@ -29,9 +29,16 @@ a:hover, a:visited, a:link, a:active {
 .reviewHeader {
   display: flex;
   justify-content: space-between;
+  padding-top: 50px;
+  
 }
 
 .reviewerName {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
 }
 
 .date {
@@ -39,10 +46,17 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .score {
-  
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
 }
 
 .review {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+
 }
 
 .yeet {
