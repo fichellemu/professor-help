@@ -8,7 +8,9 @@
     </head>
     <body>
         <a href="https://sims.rutgers.edu/webreg/"><i class="fa fa-graduation-cap" style="font-size:75px;color:white;" > </i></a>
-        <h1 class="person">Reviews for this Professor</h1>
+        <%if (items.length >0) { %>
+            <h1 class="major1"><%= items[0].FullName %></h1>
+        <% } %>
             <div class="review">
                 <a href=final5.html><button class="bt-review">Write a Review</button></a>  
             </div>
