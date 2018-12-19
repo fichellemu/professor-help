@@ -8,7 +8,9 @@
     </head>
     <body>
         <a href="https://sims.rutgers.edu/webreg/"><i class="fa fa-graduation-cap" style="font-size:75px;color:white;" > </i></a>
-        <h1 class="major1">Foundations of Business Programming</h1>
+        <%if (items.length >0) { %>
+        <h1 class="major1"><%= items[0].ProfessorFirst %></h1>
+        <% } %>
         <h2 class="cORe">Professors</h2>
         <% items.forEach(function (item) { %>
             <div class="scalep">
